@@ -1,14 +1,16 @@
 package main
 
-func main() {
-	var n int
-	a := []int {1, 2}
+import "fmt"
 
-	for i = 0; i =< 10; i++ {
-		fib := append(a[i],a[i+1],a[i]+a[i+1])
-		if fib[i]%2 == 0 {
-			n += fib[i]
+func main() {
+	var a,b int = 1, 2
+	var n int = 0
+
+	for b < 4000000 {
+		if b%2 == 0 {
+			n += b
 		}
+		a,b = b, a+b
 	}
-	println(n)
+	fmt.Println(n)
 }
