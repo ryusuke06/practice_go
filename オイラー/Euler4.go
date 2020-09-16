@@ -23,7 +23,7 @@ func main() {
 	largest_product := int64(0)
 	i, j := int64(999), int64(999)
 
-	for i > 0 && j > 0 {
+	for i > 99 && j > 99 {
 		product = i * j
 		if is_palindrome(product) && product > largest_product {
 			largest_product = product
@@ -33,7 +33,7 @@ func main() {
 			if i*j < largest_product {
 				break
 			}
-		} else if j > 1 {
+		} else if j > 100 { // j > 99 だと最終的に j = 99 となり、継続式から外れて次の繰り返しが行われないから j > 100
 			j -= 1
 		} else {
 			i--
