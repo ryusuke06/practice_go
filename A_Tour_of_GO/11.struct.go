@@ -27,12 +27,12 @@ func main() {
 	v4 := Vertex{}
 	fmt.Println(v4) // {0 0 }
 
-	var v5 Vertex
-	fmt.Printf("%T %v\n", v5, v5)
+	var v5 Vertex // 型リテラルに対応した初期値が返る
+	fmt.Printf("%T %v\n", v5, v5) // main.Vertex {0 0 }
 
 	v6 := new(Vertex)
-	fmt.Printf("%T %v\n", v6, v6)
+	fmt.Printf("%T %v\n", v6, v6) // *main.Vertex &{0 0 }
 
-	v7 := &Vertex{} // 明示的にポインタが返ると示せる
-	fmt.Printf("%T %v\n", v7, v7)
+	v7 := &Vertex{} // newと同じだがampersandを使い明示的にポインタが返ると示せる
+	fmt.Printf("%T %v\n", v7, v7) // *main.Vertex &{0 0 }
 }
