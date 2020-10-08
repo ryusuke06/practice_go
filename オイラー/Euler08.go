@@ -43,7 +43,7 @@ func main() {
 
 	var ans int
 
-	for i,j := 0,5; j <= 1000; i++{
+	for i,j := 0,5; j <= 1000; i++{ // 継続式に存在しないスライスを書くだけでパニック num[i:j]!=nilとかでもだめ！！ len()とかを使おう！
 		var n int = 1
 		for _, v := range num[i:j] { // 文字列のrange文のvalueがint32=>これはbyte型だから！！
 			v, _ := strconv.Atoi(string(v)) // errHandlingは無しで
